@@ -1,105 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF‑8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Burning Man Yurts</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f7f3eb;
-      color: #333;
-    }
+    body { margin: 0; padding: 0; font-family: sans-serif; color: #333; background: #faf5ee; }
     header {
-      background-color: #222;
-      color: #fff;
-      padding: 2rem;
-      text-align: center;
+      background: url('https://tse3.mm.bing.net/th/id/OIP.YvOh6-79nMdKG6onTgSPVwHaE8') center/cover no-repeat;
+      height: 60vh; color: white; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
     }
-    nav {
-      text-align: center;
-      background: #444;
-    }
+    header h1 { font-size: 3rem; margin: 0; }
+    header p { font-size: 1.3rem; }
+    nav { text-align: center; background: #333; }
     nav a {
-      color: white;
-      text-decoration: none;
-      margin: 1rem;
-      display: inline-block;
-      padding: 1rem;
+      color: white; text-decoration: none; margin: 0 1rem; padding: 1rem;
+      font-weight: bold; display: inline-block;
     }
-    nav a:hover {
-      background-color: #666;
+    nav a:hover { background: #555; }
+    .section { max-width: 1000px; margin: auto; padding: 3rem 1rem; }
+    .hero-btn {
+      background:#ff6600;color:white;border:none;padding:1rem 2rem;
+      font-size:1rem;cursor:pointer;margin-top:1rem;
     }
-    .section {
-      padding: 4rem 2rem;
-      max-width: 900px;
-      margin: auto;
-    }
-    .cta {
-      background-color: #222;
-      color: white;
-      text-align: center;
-      padding: 3rem 2rem;
-    }
-    .cta button {
-      padding: 1rem 2rem;
-      font-size: 1rem;
-      background-color: #ff6600;
-      border: none;
-      color: white;
-      cursor: pointer;
-      margin-top: 1rem;
-    }
-    .cta button:hover {
-      background-color: #e65c00;
-    }
-    footer {
-      background-color: #111;
-      color: #ccc;
-      text-align: center;
-      padding: 2rem;
-    }
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-      margin-top: 2rem;
-    }
-    .gallery img {
-      width: 100%;
-      border-radius: 8px;
-    }
+    .gallery { display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem; }
+    .gallery img { width:100%;border-radius:8px; }
+    .team { text-align:center; }
+    .team img { max-width:300px;border-radius:10px; margin:1rem auto; display:block;}
+    .packages { display:flex;flex-wrap:wrap; gap:1.5rem; justify-content:center; }
+    .package { background:#fff;padding:1.5rem;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,0.1); width:280px; }
+    .package h3 { margin-top:0; }
+    footer { background:#222;color:#ccc;text-align:center;padding:2rem; }
   </style>
 </head>
 <body>
+
   <header>
     <h1>Burning Man Yurts</h1>
-    <p>Custom-built. Delivered. Installed. Removed. You just show up.</p>
+    <p>Festival‑ready shelters built, delivered, set up, and broken down.</p>
+    <button class="hero-btn" onclick="location.href='#contact'">Reserve Your Yurt</button>
   </header>
 
   <nav>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#contact">Contact</a>
+    <a href="#about">About</a><a href="#packages">Packages</a><a href="#gallery">Gallery</a>
+    <a href="#team">Team</a><a href="#contact">Contact</a>
   </nav>
 
   <section id="about" class="section">
     <h2>About Us</h2>
-    <p>We specialize in building and deploying beautiful, custom yurts for Burning Man attendees. Whether you're a solo traveler or leading a large theme camp, we provide comfortable, durable, and weather-ready yurts to make your desert experience unforgettable. All you have to do is arrive—we handle setup and breakdown.</p>
+    <p>We build and deploy custom yurts for Burning Man attendees—delivering and installing before you arrive, and removing everything after your camp departs.</p>
+    <p>Each yurt is designed for extreme desert conditions: insulated, reflective, and structurally sound. Your campsite experience should be about art, community, and comfort—not sun, dust, or setup stress.</p>
   </section>
 
-  <section id="services" class="section">
-    <h2>Our Services</h2>
-    <ul>
-      <li>Custom-built yurts for desert durability and style</li>
-      <li>Delivery directly to your designated camp</li>
-      <li>Professional setup prior to your arrival</li>
-      <li>Breakdown and removal after the event</li>
-      <li>Optional upgrades: insulation, solar power, cooling fans, and more</li>
-    </ul>
+  <section id="packages" class="section">
+    <h2>Our Packages</h2>
+    <div class="packages">
+      <div class="package">
+        <h3>Custom Yurt Build</h3>
+        <p>Tailored design, built to withstand dust, wind, and heat.</p>
+      </div>
+      <div class="package">
+        <h3>Delivery & Setup</h3>
+        <p>We bring your yurt directly to your camp and set it up before your arrival.</p>
+      </div>
+      <div class="package">
+        <h3>Teardown & Removal</h3>
+        <p>When your camp closes, we take everything down cleanly—no moop left behind.</p>
+      </div>
+      <div class="package">
+        <h3>Upgrades Available</h3>
+        <p>Insulation, solar-ready power, cooling fans, and more.</p>
+      </div>
+    </div>
   </section>
 
   <section id="gallery" class="section">
@@ -112,25 +85,26 @@
     </div>
   </section>
 
+  <section id="team" class="section team">
+    <h2>Meet Our Team</h2>
+    <img src="8AB5BB09-6B17-4C90-886F-A98E1B7F5F53.jpg" alt="Lead Yurt Builder">
+    <p>This is our lead yurt designer at Burning Man—bringing experience, craft, and playa-inspired spirit to every setup.</p>
+  </section>
+
   <section id="contact" class="section">
-    <h2>Contact Us</h2>
-    <p>Get a quote or reserve your yurt now. Email us at <a href="mailto:info@burningmanyurts.com">info@burningmanyurts.com</a> or fill out the form below:</p>
+    <h2>Reserve Your Yurt</h2>
+    <p>Email us at <a href="mailto:info@burningmanyurts.com">info@burningmanyurts.com</a> or fill out the form below:</p>
     <form>
-      <label>Name:<br><input type="text" name="name" /></label><br><br>
-      <label>Email:<br><input type="email" name="email" /></label><br><br>
-      <label>Tell us about your camp:<br><textarea name="message" rows="5"></textarea></label><br><br>
-      <button type="submit">Send Inquiry</button>
+      <label>Name:<br><input type="text" name="name"></label><br><br>
+      <label>Email:<br><input type="email" name="email"></label><br><br>
+      <label>Your Camp / Needs:<br><textarea name="message" rows="4"></textarea></label><br><br>
+      <button type="submit" class="hero-btn">Send Inquiry</button>
     </form>
   </section>
 
-  <section class="cta">
-    <h2>Ready to Reserve Your Yurt?</h2>
-    <p>Spaces are limited—reserve early for Burning Man 2025.</p>
-    <button onclick="window.location.href='#contact'">Contact Us</button>
-  </section>
-
   <footer>
-    <p>&copy; 2025 Burning Man Yurts. All rights reserved.</p>
+    <p>&copy; 2025 Burning Man Yurts. Designed for comfort and built for the playa.</p>
   </footer>
+
 </body>
 </html>
